@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { AddPlayerComponent } from '../add-player/add-player.component';
+import { players } from 'src/app/players';
 
 @Component({
   selector: 'app-assemble',
@@ -7,9 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AssembleComponent implements OnInit {
 
-  constructor() { }
+  closeResult = '';
+  playerList = players
+
+  constructor(private modalService: NgbModal) { }
 
   ngOnInit() {
   }
 
+  open() {
+    this.modalService.open(AddPlayerComponent);
+  }
 }

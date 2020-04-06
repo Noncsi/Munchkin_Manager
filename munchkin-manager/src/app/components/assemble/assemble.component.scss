@@ -1,5 +1,11 @@
-#button-add-new-player {
-    width: 2em;
-    border-style: none;
-    font-size: 10em;
+.playerContainer {
+    display: flex;
+    justify-content: start;
+}
+
+.player {
+    border-style: solid;
+    padding: 1em;
+    border-radius: 10px;
+    margin: 5px;
 }

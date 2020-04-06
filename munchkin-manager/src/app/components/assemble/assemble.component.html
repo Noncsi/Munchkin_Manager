@@ -1,2 +1,10 @@
 <h1>Assemble the game!</h1>
-<button id='button-add-new-player'>+</button>
+<div class="playerContainer">
+    <div *ngFor="let player of playerList">
+        <div class="player">
+            <h3>name: {{ player._name }}</h3>
+            <h4>sex: {{player._sex}}</h4>
+        </div>
+    </div>
+    <button id='button-add-new-player' (click)="open()">+</button>
+</div>
