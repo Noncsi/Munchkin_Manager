@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
-import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl } from '@angular/forms';
 import { players } from 'src/app/players';
 import { Player } from 'src/app/datamodels/player';
 import { Sex } from 'src/app/datamodels/sex.enum';

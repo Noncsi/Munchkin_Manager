@@ -11,7 +11,7 @@ import { players } from 'src/app/players';
 export class AssembleComponent implements OnInit {
 
   closeResult = '';
-  playerList = players
+  playerList = players;
 
   constructor(private modalService: NgbModal) { }
 

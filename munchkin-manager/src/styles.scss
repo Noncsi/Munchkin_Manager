@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    background-color: #f9d9af;
+}
+
+.playerContainer {
+    display: flex;
+    justify-content: start;
+}
+
+.player {
+    font-size: 1em;
+    height: 20em;
+    width: 13em;
+    padding: 1em;
+    border-radius: 10px;
+    margin: 5px;
+    border-style: solid;
+    border-color: #5d2818;
+    border-width: 13px;
+    background-color: #fefce3;
+}

@@ -1,6 +1,6 @@
-<form [formGroup]="playerForm" (ngSubmit)="onSubmit(playerForm.value)">
+<form [formGroup]="editPlayerForm" (ngSubmit)="onSubmit(editPlayerForm.value)">
     <div class="modal-header">
-        <h4 class="modal-title" id="modal-basic-title">Add new player</h4>
+        <h4 class="modal-title" id="modal-basic-title">Edit</h4>
         <button type="button" class="close" aria-label="Close"
             (click)="activeModalService.dismiss('Cross click')">
             <span aria-hidden="true">&times;</span>
@@ -8,10 +8,11 @@
     </div>
     <div class="modal-body">
         <div class="form-group">
-            <label for="inputPlayerName">Name</label>
-            <input type="text" id="inputPlayerName" class="form-control" formControlName="name"
-                name="ipn" placeholder="Super Munchkin">
-            <div class="btn-group btn-group-toggle" ngbRadioGroup formControlName="sex"
+            <label for="editPlayerLevel">Level</label>
+            <input type="number" [ngModel]="selectedPlayer._level" [min]="1" [max]="10" id="editPlayerLevel" class="form-control" formControlName="level">
+            <label for="editPlayerStrength">Strength</label>
+            <input type="number" [ngModel]="selectedPlayer._strength" [min]="1" id="editPlayerStrength" class="form-control" formControlName="strength">
+            <div class="btn-group btn-group-toggle" ngbRadioGroup formControlName="sex" [ngModel]="selectedPlayer._sex"
                 name="radioBasic">
                 <label ngbButtonLabel class="btn-primary">
                     <input ngbButton type="radio" value="Male">Male

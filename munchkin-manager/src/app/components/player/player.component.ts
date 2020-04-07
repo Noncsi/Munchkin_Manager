@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Player } from 'src/app/datamodels/player';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { EditPlayerComponent } from '../edit-player/edit-player.component';
 
 @Component({
   selector: 'app-player',
@@ -7,9 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlayerComponent implements OnInit {
 
-  constructor() { }
+  @Input() player : Player
+  constructor(private modalService: NgbModal) { }
 
   ngOnInit(): void {
   }
 
+  select() {
+    console.log(this.player._name);
+    const modalRef = this.modalService.open(EditPlayerComponent);
+    modalRef.componentInstance.selectedPlayer = this.player;
+  }
 }
