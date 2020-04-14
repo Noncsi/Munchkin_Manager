@@ -1,9 +1,9 @@
-<h1>Assemble the game!</h1>
+<h1 class="subtitle">Create players</h1>
 <div class="playerContainer">
     <div class="playerContainer">
         <app-player *ngFor="let player of playerList" [player]="player"></app-player>
     </div>
-    <button class="player" (click)="open()">+</button>
+    <button class="player" id="add-player" (click)="open()">+</button>
 </div>
 <button routerLink="/Game">Start</button>
 

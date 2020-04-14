@@ -1,6 +1,49 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: quasimodo;
+    src: url(assets/fonts/QuasimodoRegular.ttf) format("opentype");
+  }
+
 body {
     background-color: #f9d9af;
+    font-family: quasimodo;
+    margin-left: 15em;
+    margin-right: 15em;
+}
+
+.main-body {
+    background-color: #fceed9;
+    padding: 4em;
+}
+
+button {
+    font-size: 1.5em;
+    background-color: #5d2818;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    padding-top: 22px;
+    margin-top: 1em;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.title {
+    text-align: center;
+    font-size: 5vw;
+    padding-top: 2em;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 4em;
+    padding-top: 2em;
+    margin-left: 3em;
+    margin-right: 3em;
 }
 
 .playerContainer {
@@ -10,13 +53,20 @@ body {
 
 .player {
     font-size: 1em;
-    height: 20em;
-    width: 13em;
-    padding: 1em;
-    border-radius: 10px;
-    margin: 5px;
-    border-style: solid;
-    border-color: #5d2818;
-    border-width: 13px;
+    height: 24vw;
+    width: 15vw;
+    padding: 1.5vw;
+    border-radius: 1vw;
+    margin: 1vw;
+    box-shadow: 0 0 0 0.6vw #5d2818;
     background-color: #fefce3;
+}
+
+#add-player {
+    font-size: 10vw;
+    padding-top: unset;
+    font-family: cursive;
+    color: black;
+    border-style: dashed;
+    border-width: thick;
 }
