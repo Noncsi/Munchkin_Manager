@@ -7,17 +7,20 @@
 body {
     background-color: #f9d9af;
     font-family: quasimodo;
-    margin-left: 15em;
-    margin-right: 15em;
+    margin-left: 6vw;
+    margin-right: 6vw;
 }
 
 .main-body {
     background-color: #fceed9;
-    padding: 4em;
+    padding: 5vw;
+    padding-top: clamp(0px, 15vh, 15vh);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 
 button {
-    font-size: 1.5em;
+    font-size: clamp(20px, 4vw, 1px);
     background-color: #5d2818;
     color: white;
     border: none;
@@ -27,6 +30,21 @@ button {
     margin-top: 1em;
 }
 
+form {
+    background-color: #5d2818;
+}
+
+.form-control {
+    margin-bottom: 1vw;
+}
+.modal-header {
+    background-color: #fceed9;
+}
+
+.modal-footer {
+    background-color: #fceed9;
+}
+
 .center {
     display: flex;
     justify-content: center;
@@ -34,16 +52,13 @@ button {
 
 .title {
     text-align: center;
-    font-size: 5vw;
+    font-size: clamp(23px, 5vw, 5vw);
     padding-top: 2em;
 }
 
 .subtitle {
     text-align: center;
-    font-size: 4em;
-    padding-top: 2em;
-    margin-left: 3em;
-    margin-right: 3em;
+    font-size: clamp(2px, 4vw, 4vw);
 }
 
 .playerContainer {
@@ -62,11 +77,16 @@ button {
     background-color: #fefce3;
 }
 
+.btn-group-toggle {
+    background-color: #fceed9;
+}
+
 #add-player {
     font-size: 10vw;
     padding-top: unset;
     font-family: cursive;
     color: black;
     border-style: dashed;
-    border-width: thick;
+    border-width: 5px;
+    box-shadow: none;
 }
